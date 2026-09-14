@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>JJ Mahal | Premium Marriage Hall in Thanjavur</title>
+
+  <meta
+    name="description"
+    content="JJ Mahal is a premium marriage and wedding venue in Thanjavur, suitable for weddings, receptions, engagements and family celebrations."
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: #0c0b0a;
+      color: #f5f0e8;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ---------------- NAVBAR ---------------- */
+
+    nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 25px 7%;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .logo {
+      font-size: 25px;
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 35px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      opacity: 0.85;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    .nav-button {
+      border: 1px solid #d6b77c;
+      padding: 11px 20px;
+      color: #d6b77c;
+    }
+
+    /* ---------------- HERO ---------------- */
+
+    .hero {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 120px 20px 80px;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.62),
+          rgba(0,0,0,0.72)
+        ),
+        radial-gradient(
+          circle at center,
+          #40362b,
+          #0c0b0a 70%
+        );
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      color: #d6b77c;
+      letter-spacing: 5px;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 1.05;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 18px;
+      color: #d8d1c6;
+    }
+
+    .hero-buttons {
+      margin-top: 40px;
+
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .primary-btn {
+      background: #d6b77c;
+      color: #15120e;
+      padding: 15px 30px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      background: #e3c98f;
+    }
+
+    .secondary-btn {
+      border: 1px solid rgba(255,255,255,0.4);
+      padding: 15px 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ---------------- GENERAL ---------------- */
+
+    section {
+      padding: 100px 7%;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .section-heading span {
+      color: #d6b77c;
+      font-family: Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(35px, 5vw, 55px);
+      font-weight: 500;
+      margin: 15px 0;
+    }
+
+    .section-heading p {
+      color: #aaa39a;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ---------------- ABOUT ---------------- */
+
+    .about {
+      background: #12100e;
+    }
+
+    .about-grid {
+      max-width: 1100px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      min-height: 450px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #5b4a35,
+          #17130f
+        );
+
+      border: 1px solid rgba(214,183,124,0.3);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      padding: 30px;
+    }
+
+    .about-image span {
+      font-size: 28px;
+      color: #d6b77c;
+      letter-spacing: 3px;
+    }
+
+    .about-text h2 {
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #aaa39a;
+      font-family: Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    /* ---------------- SERVICES ---------------- */
+
+    .services {
+      background: #0c0b0a;
+    }
+
+    .service-grid {
+      max-width: 1100px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 40px 30px;
+
+      background: #12100e;
+
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #d6b77c;
+    }
+
+    .service-number {
+      color: #d6b77c;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    .service-card h3 {
+      margin: 20px 0 12px;
+      font-size: 25px;
+    }
+
+    .service-card p {
+      color: #99938b;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    /* ---------------- HIGHLIGHTS ---------------- */
+
+    .highlights {
+      background: #17130f;
+    }
+
+    .highlight-grid {
+      max-width: 1000px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .highlight {
+      text-align: center;
+      padding: 35px 15px;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .highlight strong {
+      display: block;
+      color: #d6b77c;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .highlight span {
+      color: #aaa39a;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    /* ---------------- CTA ---------------- */
+
+    .cta {
+      text-align: center;
+
+      background:
+        linear-gradient(
+          rgba(12,11,10,0.82),
+          rgba(12,11,10,0.82)
+        ),
+        radial-gradient(
+          circle,
+          #59482f,
+          #0c0b0a 70%
+        );
+    }
+
+    .cta h2 {
+      font-size: clamp(40px, 6vw, 65px);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .cta p {
+      color: #bbb4aa;
+      max-width: 600px;
+      margin: 0 auto 35px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ---------------- FOOTER ---------------- */
+
+    footer {
+      padding: 40px 7%;
+      background: #080807;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+
+      color: #777;
+    }
+
+    .footer-logo {
+      color: #d6b77c;
+      letter-spacing: 2px;
+    }
+
+    /* ---------------- RESPONSIVE ---------------- */
+
+    @media (max-width: 800px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 500px) {
+
+      section {
+        padding: 75px 5%;
+      }
+
+      .highlight-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-image {
+        min-height: 300px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="logo">JJ MAHAL</div>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <a href="#contact" class="nav-button">Enquire</a>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Marriage • Weddings • Celebrations
+      </div>
+
+      <h1>
+        Celebrate Your<br>
+        Special Moments
+      </h1>
+
+      <p>
+        A distinguished marriage hall in Thanjavur,
+        designed for weddings, receptions, engagements
+        and unforgettable family celebrations.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#contact" class="primary-btn">
+          Enquire Now
+        </a>
+
+        <a href="tel:+910000000000" class="secondary-btn">
+          Call JJ Mahal
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ABOUT -->
+
+  <section class="about" id="about">
+
+    <div class="about-grid">
+
+      <div class="about-image">
+        <span>JJ MAHAL<br>THANJAVUR</span>
+      </div>
+
+      <div class="about-text">
+
+        <div class="eyebrow">
+          About JJ Mahal
+        </div>
+
+        <h2>
+          A Place For<br>
+          Beautiful Beginnings
+        </h2>
+
+        <p>
+          JJ Mahal offers a welcoming venue for weddings,
+          receptions, engagements and important family
+          celebrations in Thanjavur.
+        </p>
+
+        <p>
+          From intimate gatherings to memorable wedding
+          celebrations, our venue provides a comfortable
+          setting for your special occasion.
+        </p>
+
+        <a href="#contact" class="primary-btn">
+          Enquire About Booking
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+
+  <section class="services" id="services">
+
+    <div class="section-heading">
+
+      <span>Our Venue</span>
+
+      <h2>
+        Designed For Your Celebration
+      </h2>
+
+      <p>
+        A versatile venue for life's most important occasions.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service-card">
+
+        <div class="service-number">01</div>
+
+        <h3>Weddings</h3>
+
+        <p>
+          Celebrate your wedding day in a spacious
+          and welcoming venue designed for memorable
+          family occasions.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">02</div>
+
+        <h3>Receptions</h3>
+
+        <p>
+          Host your reception and welcome your guests
+          in a comfortable environment for a memorable
+          celebration.
+        </p>
+
+      </div>
+
+
+      <div class="service-card">
+
+        <div class="service-number">03</div>
+
+        <h3>Family Events</h3>
+
+        <p>
+          Suitable for engagements, anniversaries,
+          family functions and other special occasions.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- HIGHLIGHTS -->
+
+  <section class="highlights">
+
+    <div class="section-heading">
+
+      <span>Why JJ Mahal</span>
+
+      <h2>
+        Everything For A Memorable Day
+      </h2>
+
+    </div>
+
+
+    <div class="highlight-grid">
+
+      <div class="highlight">
+        <strong>01</strong>
+        <span>Wedding Venue</span>
+      </div>
+
+      <div class="highlight">
+        <strong>02</strong>
+        <span>Reception Events</span>
+      </div>
+
+      <div class="highlight">
+        <strong>03</strong>
+        <span>Family Functions</span>
+      </div>
+
+      <div class="highlight">
+        <strong>04</strong>
+        <span>Thanjavur Location</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CALL TO ACTION -->
+
+  <section class="cta" id="contact">
+
+    <div class="eyebrow">
+      Plan Your Celebration
+    </div>
+
+    <h2>
+      Your Special Day<br>
+      Starts Here.
+    </h2>
+
+    <p>
+      Enquire about availability, bookings and arrangements
+      for your upcoming wedding or special occasion.
+    </p>
+
+    <a
+      href="tel:+910000000000"
+      class="primary-btn"
+    >
+      Call JJ Mahal
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-logo">
+      JJ MAHAL
+    </div>
+
+    <div>
+      Thanjavur, Tamil Nadu
+    </div>
+
+    <div>
+      © 2026 JJ Mahal
+    </div>
+
+  </footer>
+
+</body>
+</html>
